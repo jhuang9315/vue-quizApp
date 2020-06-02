@@ -25,9 +25,13 @@
         v-bind:disabled ="selectedIndex===null || answered"
       >
         Submit
-      </b-button>
-      
-      <b-button @click="next" variant="success" href="#">Next Question</b-button> <!-- calling next function -->
+      </b-button>  
+      <b-button 
+        @click="next" variant="success" href="#"
+        v-bind:disabled = "answered ===false"
+      >
+      Next Question
+      </b-button> <!-- calling next function -->
     </b-jumbotron>
   </div>
 </template>
